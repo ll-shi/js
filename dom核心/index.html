@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="test">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <script>
+        const body = document.querySelector('body');
+        console.log(body.nodeName);
+        const firstLi = document.querySelectorAll(".test li")[0];
+        console.log(firstLi);
+        // 获取li父节点
+        const parentN = firstLi.parentNode;
+        const parentE = firstLi.parentElement;
+        console.log(parentN);
+        console.log(parentE);
+    </script>
+
+    <script>
+        // dom元素操作
+        const test = document.querySelector('.test');
+        const attrValue = test.getAttribute('class');
+        console.log(attrValue);
+        // 设置一个属性
+        test.setAttribute('data-name','llshi');
+        console.log(test.getAttribute('data-name'));
+        test.dataset.id = '110';
+        console.log(test.getAttribute('data-id'));
+    </script>
+</body>
+</html>

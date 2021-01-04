@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test{
+             margin: 100px auto;
+             width: 200px;
+             height: 200px;
+             padding: 1px;
+             background-color: skyblue;
+             border: 2px solid red;
+             overflow: auto;
+        }
+        .wrapper{
+            position: absolute;
+            left:0;
+            right: 0;
+            margin: auto;
+            border: 1px solid green;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="test">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sunt minima, atque facilis labore ad rem quibusdam error, debitis optio aliquid qui, sequi impedit dolor nihil. Inventore facilis consequatur error.
+          Deleniti, blanditiis ducimus optio eaque nesciunt quaerat laborum officiis fugit eum sequi quia vitae, deserunt quis in reiciendis ullam voluptate veniam iusto. Similique nesciunt blanditiis, dolor sapiente officiis ducimus tenetur!
+          Modi perspiciatis, vero eum magni facilis necessitatibus, quis voluptatibus omnis sunt veritatis ipsam itaque id asperiores dicta, error est deserunt perferendis blanditiis tempora aperiam doloremque obcaecati neque ratione maxime! Deserunt!
+          Quia dolore mollitia in alias eligendi, officiis nam omnis. Magni quos eos blanditiis cumque, minima dignissimos libero illum totam, distinctio nam, sint tempore! Iste provident perferendis voluptate ad laboriosam quod?
+          Non, voluptatem ipsa officiis tenetur nemo reprehenderit aliquam labore consequuntur! Voluptatibus eum ducimus sunt, ullam dolorem atque vitae quibusdam quaerat adipisci voluptatem quisquam architecto? Sed accusamus culpa commodi odio laboriosam?
+      </div>
+    </div>
+    <script>
+        const test = document.querySelector('.test');
+        // clientWidth 不包括边框,包括padding
+        console.log(test.clientWidth);
+        // offset整个元素的宽度
+        console.log(test.offsetWidth);
+        // 相对第一个定位祖先元素的left，如果没有定位祖先元素，那么就是相对body
+        console.log(test.offsetLeft);
+        // clientTop 表示顶部边框的宽度
+        console.log(test.clientTop);
+        test.onscroll = function(){
+            // scrollTop 表示纵向滚动条位置
+            console.log(this.scrollTop);
+            // scrollLeft 表示横向滚动条的位置
+            console.log(this.scrollLeft);
+        }
+    </script>
+</body>
+</html>
