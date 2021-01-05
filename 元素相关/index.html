@@ -44,8 +44,10 @@
         console.log(test.offsetLeft);
         // clientTop 表示顶部边框的宽度
         console.log(test.clientTop);
+        // 滚动内容的实际宽度
+        console.log(test.scrollHeight);
         test.onscroll = function(){
-            // scrollTop 表示纵向滚动条位置
+            // scrollTop 表示纵向滚动条位置 scrollHeight - offsetHeight
             console.log(this.scrollTop);
             // scrollLeft 表示横向滚动条的位置
             console.log(this.scrollLeft);
